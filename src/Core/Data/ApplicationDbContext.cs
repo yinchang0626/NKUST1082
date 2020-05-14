@@ -14,5 +14,9 @@ namespace WebApplication.Data
             : base(options)
         {
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=aspnet-WebApplication-EC63BA8C-EBF0-4A89-B614-9EB716D5226A;Trusted_Connection=True;MultipleActiveResultSets=true");
+        }
     }
 }

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<YC.Models.Station>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="ImportDatas">Import from xml</a>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ObservatoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocationByTWD67)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreateTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ObservatoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocationByTWD67)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreateTime)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
