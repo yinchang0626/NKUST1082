@@ -13,25 +13,5 @@ namespace YC.Models
         public string ObservatoryName { get; set; }
         public string LocationByTWD67 { get; set; }
         public DateTime CreateTime { get; set; }
-
-
-        //public string locationAddress;
-
-        //public string LocationAddress
-        //{
-        //    get
-        //    {
-        //        return locationAddress;
-        //    }
-        //    set
-        //    {
-        //        if (value.Length < 10)
-        //            locationAddress = value;
-        //        else
-        //            locationAddress = "";
-        //    }
-        //}
-
-
     }
 }
